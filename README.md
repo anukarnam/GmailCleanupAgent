@@ -194,21 +194,21 @@ sqlite3 data/gmail_cleanup.db
 
 ### Adding New Categories
 
-Edit `src/categorizer.py` and add to the category list:
+Edit `categorizer.py` and add to the category list:
 
 ```python
 #- your_category: Description of category
 ```
 
-Also update the database schema in `src/database.py`.
+Also update the database schema in `database.py`.
 
 ### Custom Categorization Logic
 
-Modify the prompt in `src/categorizer.py` to adjust categorization behavior.
+Modify the prompt in `categorizer.py` to adjust categorization behavior.
 
 ### Adding Analysis Steps
 
-Extend the LangGraph workflow in `src/agent.py`:
+Extend the LangGraph workflow in `agent.py`:
 
 ```python
 #workflow.add_node("your_step", your_function)
@@ -255,7 +255,7 @@ gmail_cleanup_agent/
 │   └── credentials.json   # Gmail OAuth (you create)
 ├── data/
 │   └── gmail_cleanup.db   # SQLite database (auto-created)
-└── src/
+└──
     ├── __init__.py
     ├── agent.py           # LangGraph workflow
     ├── gmail_client.py    # Gmail API client
