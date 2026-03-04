@@ -214,27 +214,6 @@ Check `.env` file and ensure API key is set correctly.
 
 Delete `config/token.pickle` and re-run to re-authenticate.
 
-## Project Structure
-
-```
-gmail_cleanup_agent/
-├── main.py                 # Entry point
-├── requirements.txt        # Python dependencies
-├── .env.example           # Environment template
-├── README.md              # This file
-├── config/
-│   └── credentials.json   # Gmail OAuth (you create)
-├── data/
-│   └── gmail_cleanup.db   # SQLite database (auto-created)
-└──
-    ├── __init__.py
-    ├── agent.py           # LangGraph workflow
-    ├── gmail_client.py    # Gmail API client
-    ├── categorizer.py     # Claude AI categorization
-    ├── database.py        # SQLite operations
-    └── cli.py             # Terminal interface
-```
-
 ## Limitations
 
 - Only processes metadata (no email body content)
