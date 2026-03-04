@@ -28,35 +28,6 @@ Built with **LangGraph** for orchestration, **Claude API** for intelligent categ
 
 🔄 **LangGraph Workflow**: Structured agent workflow with checkpointing
 
-## Architecture
-
-```
-┌─────────────┐
-│ Gmail API   │  Fetch metadata
-└──────┬──────┘
-       │
-┌──────▼──────┐
-│  Database   │  Store & track
-└──────┬──────┘
-       │
-┌──────▼──────┐
-│ Claude AI   │  Categorize
-└──────┬──────┘
-       │
-┌──────▼──────┐
-│  LangGraph  │  Orchestrate
-│   Agent     │
-└──────┬──────┘
-       │
-┌──────▼──────┐
-│  CLI        │  User approval
-└──────┬──────┘
-       │
-┌──────▼──────┐
-│ Execution   │  Delete emails
-└─────────────┘
-```
-
 ## Prerequisites
 
 1. **Python 3.9+**
